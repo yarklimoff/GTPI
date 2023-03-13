@@ -278,6 +278,8 @@ a:visited {
 .break-line {
   margin-right: 200px;
   margin-left: 200px;
+  margin-bottom: 50px;
+  margin-top: 60px;
 }
 
 .break-line img {
@@ -651,12 +653,12 @@ a:visited {
 }
 
 .equipments {
-  margin-left: 200px;
-  margin-right: 200px;
   min-height: calc(100vh - 252px - 80px);
 }
 
 .return-section {
+  margin-left: 200px;
+  margin-right: 200px;
   margin-top: 37px;
   margin-bottom: 17px;
   display: flex;
@@ -682,4 +684,119 @@ a:visited {
   color: var(--gtpi-grey);
   text-align: center;
   padding-bottom: 4px;
+}
+
+.service {
+  margin: 50px 200px 175px 200px;
+}
+
+.service-header {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1em;
+  color: #989898;
+}
+
+.service-sub-header {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 47px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--gpti-accent);
+  margin-bottom: 57px;
+}
+
+.service-main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 40px;
+}
+
+.service-main-element-header {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  border-bottom: 1px solid var(--gpti-accent);
+  height: 70px;
+}
+
+.service-main-element-header-text {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #505050;
+}
+
+.service-main-element-body {
+  margin-top: 18px;
+  font-size: 12px;
+}
+
+.service-main-element-body li {
+  margin-bottom: 10px;
+  color: #000000;
+  opacity: 0.8;
+}
+
+.service-main-element-body span {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 125%;
+  color: #000000;
+}
+
+.service-main-element-body-text {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 125%;
+  color: #000000;
+  opacity: 0.8;
+}
+
+.equipment {
+  margin: 50px 200px 9px 200px;
+}
+
+.equipment-header {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 71px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--gpti-accent);
+  margin-bottom: 66px;
+}
+
+.equipment-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.equipment-main-element-header {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 125%;
+  color: var(--gtpi-grey);
+  border-bottom: 1px solid rgba(50, 180, 180, 0.2);
+  height: 60px;
+    border: 1px solid black;
+    text-align: center;
+
 }
