@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <div class="header-wrapper">
@@ -26,15 +27,15 @@
             <a href="index.html" class="btn active">ГЛАВНАЯ</a>
             <a href="pages/equipments.html" class="btn">ОБОРУДОВАНИЕ И УСЛУГИ</a>
             <a href="pages/customers.html" class="btn">ЗАКАЗЧИКИ</a>
-            <a href="pages/news.html" class="btn">НОВОСТИ</a>
+            <!-- <a href="pages/news.html" class="btn">НОВОСТИ</a> -->
           </nav>
         </div>
       </header>
       <img src="assets/gazodobicha1.png" alt="background" class="background" />
-      <form class="form">
+      <div class="form">
         <div class="form-header">
           <div class="rectangle"></div>
-          <div class="form-header-text">Полный спектр работ<br />на всех этапах</div>
+          <div class="form-header-text">Полный спектр работ<br>на всех этапах</div>
           <img src="assets/Rectangle_12.svg" />
         </div>
         <div class="form-main">
@@ -45,13 +46,13 @@
           </ul>
         </div>
         <div class="form-buttons">
-          <button class="submit-button">Запросить расчёт</button>
-          <button class="info-button">Контактная информация</button>
+          <button class="submit-button" onclick="">Запросить расчёт</button>
+          <a class="info-button" href="#contacts">Контактная информация</a>
         </div>
-      </form>
+      </div>
     </div>
 
-    <section class="last-news">
+    <!-- <section class="last-news">
       <div class="last-news-header">Последние новости</div>
       <div class="last-news-main-element">
         <div class="last-news-main-element-picture">
@@ -114,11 +115,11 @@
       <div class="last-news-read-all-wrapper">
         <a href="pages/news.html" class="last-news-read-all">читать все новости</a>
       </div>
-    </section>
+    </section> -->
 
-    <section class="break-line">
+    <!-- <section class="break-line">
       <img src="assets/Rectangle_15.svg">
-    </section>
+    </section> -->
 
     <section class="about">
       <div class="about-header">О нас</div>
@@ -201,7 +202,7 @@
       партнер-исполнитель инжиниринговых работ.
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="contacts-header">Контактная информация</div>
         <div class="contacts-main">
           <div class="contacts-main-left">
