@@ -1,11 +1,35 @@
-var url = 'http://example.com/products.html'.split('/'); //replace string with location.href
-var navLinks = document.getElementsByTagName('nav')[0].getElementsByTagName('a');
-//naturally you could use something other than the <nav> element
-var i = 0;
-var currentPage = url[url.length - 1];
-for (i; i < navLinks.length; i++) {
-  var lb = navLinks[i].href.split('/');
-  if (lb[lb.length - 1] == currentPage) {
-    navLinks[i].className = 'current';
-  }
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById("overlay");
+console.log(overlay)
+openModalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget);
+    openModal(modal);
+  });
+});
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active');
+  modals.forEach((modal) => {
+    closeModal(modal);
+  });
+});
+
+closeModalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal');
+    closeModal(modal);
+  });
+});
+
+function openModal(modal) {
+  if (modal == null) return;
+  modal.classList.add('active');
+  overlay.classList.add('active');
+}
+
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
 }

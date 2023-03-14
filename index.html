@@ -7,13 +7,34 @@
     <title>Document</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="normalize.css" rel="stylesheet" type="text/css" />
-    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
   </head>
   <body>
+    <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="modal-header-title">Запросить расчет</div>
+      <button data-close-button class="close-button"><img src="assets/close-icon.svg"></button>
+    </div>
+    <form class="modal-body">
+      <div class="modal-body-name">
+        <div class="modal-body-name-text">ФИО</div>
+        <input class="modal-body-name-input" placeholder="Иванов Иван Иванович" type="text">
+      </div>
+      <div class="modal-body-name">
+        <div class="modal-body-name-text">Номер телефона</div>
+        <input class="modal-body-name-input" placeholder="+7 000 00 00 00" type="tel">
+      </div>
+
+      <div class="modal-body-name">
+        <div class="modal-body-name-text">Кратко о вашей ситуации (необязательно)</div>
+        <input class="modal-body-situation-input" placeholder="+7 000 00 00 00" type="tel">
+      </div>
+
+    </form>
+  </div>
+  <div id="overlay"></div>
     <div class="header-wrapper">
       <header class="header">
         <img src="assets/GTPI_logo.svg" alt="logo" />
@@ -46,7 +67,7 @@
           </ul>
         </div>
         <div class="form-buttons">
-          <button class="submit-button" onclick="">Запросить расчёт</button>
+          <button data-modal-target="#modal" class="submit-button">Запросить расчёт</button>
           <a class="info-button" href="#contacts">Контактная информация</a>
         </div>
       </div>
@@ -308,4 +329,5 @@
       </div>
     </footer>
   </body>
+  <script defer src="script.js"></script>
 </html>
