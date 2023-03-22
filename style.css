@@ -1,3 +1,19 @@
+@-ms-viewport {
+  width: 1400px;
+}
+@-webkit-viewport {
+  width: 1400px;
+}
+@-moz-viewport {
+  width: 1400px;
+}
+@-o-viewport {
+  width: 1400px;
+}
+@viewport {
+  width: 1400px;
+}
+
 :root {
   --gpti-accent: #32b4b4;
   --gtpi-grey: #505050;
@@ -1031,4 +1047,3 @@ a:visited {
 .customers-logos-loop img {
   padding: 0 0.5em;
 }
-
