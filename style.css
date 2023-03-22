@@ -52,6 +52,11 @@ body {
   padding-top: 17px;
 }
 
+.contact-info a {
+  text-decoration: none;
+  color: var(--gpti-accent);
+}
+
 .header-nav {
   display: flex;
   justify-content: end;
@@ -73,10 +78,6 @@ a:visited {
   padding-bottom: 9px;
 }
 
-.email,
-.phone {
-  color: var(--gpti-accent);
-}
 
 .background {
   width: 100%;
@@ -527,6 +528,11 @@ a:visited {
   margin-left: 135px;
   margin-top: 37px;
   gap: 12px;
+}
+
+.footer-contacts a {
+  text-decoration: none;
+  color: white;
 }
 
 .footer-contacts div {
@@ -1024,8 +1030,8 @@ a:visited {
 }
 
 .customers-logos {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 90px;
+  margin-bottom: 160px;
 }
 
 .customers-logos-loop {
