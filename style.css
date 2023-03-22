@@ -9,6 +9,7 @@ html {
 
 body {
   font-family: 'Oswald';
+  min-width: 1400px;
 }
 
 .header {
