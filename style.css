@@ -9,7 +9,7 @@ html {
 
 body {
   font-family: 'Oswald';
-  min-width: 1600px;
+  min-width: 98vw;
 }
 
 .header {
@@ -66,7 +66,6 @@ a:visited {
 .email,
 .phone {
   color: var(--gpti-accent);
-  text-decoration: none;
 }
 
 .background {
