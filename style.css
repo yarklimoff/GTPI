@@ -1,12 +1,6 @@
 @-ms-viewport {
   width: 1400px;
 }
-@-webkit-viewport {
-  width: 1400px;
-}
-@-moz-viewport {
-  width: 1400px;
-}
 @-o-viewport {
   width: 1400px;
 }
@@ -451,8 +445,8 @@ a:visited {
   color: var(--gpti-accent);
   margin-bottom: 88px;
   margin-top: 111px;
-  margin-right: 200px;
-  margin-left: 200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .certificates {
@@ -1030,20 +1024,19 @@ a:visited {
 }
 
 .customers-logos {
-  height: 350px;
-  position: relative;
-  overflow: hidden;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .customers-logos-loop {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
   overflow: hidden;
-  white-space: nowrap;
-  animation: bannermove 5s linear infinite;
+  height: 50px;
 }
 
 .customers-logos-loop img {
-  padding: 0 0.5em;
 }
