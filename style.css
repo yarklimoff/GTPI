@@ -5,11 +5,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Oswald';
-  min-width: 1400px;
+  overflow-x: hidden;
 }
 
 .header {
