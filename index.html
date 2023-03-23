@@ -20,7 +20,7 @@
       <div class="modal-header-title">Запросить расчет</div>
       <button data-close-button class="close-button"><img src="assets/close-icon.svg"></button>
     </div>
-    <form class="modal-body" id="form">
+    <form class="modal-body" id="form" action="send.php" method="post" name="form">
       <div class="modal-body-name">
         <div class="modal-body-name-text">ФИО</div>
         <input class="modal-body-name-input" placeholder="Иванов Иван Иванович" type="text" name="fio" required id="fio">
@@ -37,7 +37,7 @@
       </div>
 
       <div class="modal-body-buttons">
-        <button class="modal-body-buttons-submit">Сохранить</button>
+        <input type="submit" class="modal-body-buttons-submit" value="Сохранить"/>
         <button class="modal-body-buttons-cancel">Отмена</button>
       </div>
     </form>
