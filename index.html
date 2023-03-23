@@ -20,27 +20,26 @@
       <div class="modal-header-title">Запросить расчет</div>
       <button data-close-button class="close-button"><img src="assets/close-icon.svg"></button>
     </div>
-    <form class="modal-body">
+    <form class="modal-body" id="form">
       <div class="modal-body-name">
         <div class="modal-body-name-text">ФИО</div>
-        <input class="modal-body-name-input" placeholder="Иванов Иван Иванович" type="text">
+        <input class="modal-body-name-input" placeholder="Иванов Иван Иванович" type="text" name="fio" required id="fio">
       </div>
       <div class="modal-body-name">
         <div class="modal-body-name-text">Номер телефона</div>
-        <input class="modal-body-name-input" placeholder="+7 000 00 00 00" type="tel">
+        <input class="modal-body-name-input" placeholder="+7 000 00 00 00" type="text" name="phone" required id="phone">
       </div>
 
       <div class="modal-body-name">
         <div class="modal-body-name-text">Кратко о вашей ситуации (необязательно)</div>
         <textarea class="modal-body-situation-input" placeholder="Пара предложений..."
-        maxlength="5000"></textarea>
+        maxlength="5000" name="problem" id="problem"></textarea>
       </div>
 
       <div class="modal-body-buttons">
         <button class="modal-body-buttons-submit">Сохранить</button>
         <button class="modal-body-buttons-cancel">Отмена</button>
       </div>
-
     </form>
   </div>
   <div id="overlay"></div>
@@ -338,5 +337,5 @@
       </div>
     </footer>
   </body>
-  <script defer src="script.js"></script>
+  <script defer src="open-modal.js"></script>
 </html>
