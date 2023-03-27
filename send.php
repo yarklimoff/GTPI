@@ -1,12 +1,58 @@
-<meta charset="UTF-8" />
+
 <?php
-$fio = "ФИО: ".$_POST['fio'].' <br />';
-$phone = "Телефон: ".$_POST['phone'].' <br />';
-$problem = "Сообщение: "$_POST['problem'].' <br />';
-$AllInOne =  $fio.$phone.$problem; 
-$to = 'yar.klimoff@yandex.ru'; 
-$send = mail($to, 'Свяжитесь с нами', $AllInOne, "Content-type:text/plain; charset = UTF-8\r\nFrom:$email"); 
-if ($send == 'true') {echo "Сообщение отправлено";}
-// Если письмо не ушло — выводим сообщение об ошибке
-else {echo "Ой, что-то пошло не так";}
-?>
+// Файлы phpmailer
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
+require 'phpmailer/Exception.php';
+
+// Переменные, которые отправляет пользователь
+$name = $_POST['fio'];
+$email = $_POST['phone'];
+$text = $_POST['problem'];
+
+// Формирование самого письма
+$title = "Сообщение ГТПИ";
+$body = "
+<h2>Новое письмо</h2>
+<b>Имя:</b> $name<br>
+<b>Почта:</b> $email<br><br>
+<b>Сообщение:</b><br>$text
+";
+
+// Настройки PHPMailer
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+try {
+    $mail->isSMTP();   
+    $mail->CharSet = "UTF-8";
+    $mail->SMTPAuth   = true;
+    //$mail->SMTPDebug = 2;
+    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
+
+    // Настройки вашей почты
+    $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+    $mail->Username   = 'your_login'; // Логин на почте
+    $mail->Password   = 'password'; // Пароль на почте
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port       = 465;
+    $mail->setFrom('mail@yandex.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
+
+    // Получатель письма
+    $mail->addAddress('youremail@yandex.ru');  
+    $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
+
+// Отправка сообщения
+$mail->isHTML(true);
+$mail->Subject = $title;
+$mail->Body = $body;    
+
+// Проверяем отравленность сообщения
+if ($mail->send()) {$result = "success";} 
+else {$result = "error";}
+
+} catch (Exception $e) {
+    $result = "error";
+    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
+}
+
+// Отображение результата
+echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);

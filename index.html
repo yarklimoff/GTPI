@@ -20,7 +20,7 @@
       <div class="modal-header-title">Запросить расчет</div>
       <button data-close-button class="close-button"><img src="assets/close-icon.svg"></button>
     </div>
-    <form class="modal-body" id="form" action="send.php" method="post" name="form">
+    <form class="modal-body" id="form" action="/send.php" method="post" name="form">
       <div class="modal-body-name">
         <div class="modal-body-name-text">ФИО</div>
         <input class="modal-body-name-input" placeholder="Иванов Иван Иванович" type="text" name="fio" required id="fio">
@@ -31,13 +31,16 @@
       </div>
 
       <div class="modal-body-name">
-        <div class="modal-body-name-text">Кратко о вашей ситуации (необязательно)</div>
-        <textarea class="modal-body-situation-input" placeholder="Пара предложений..."
+        <div class="modal-body-name-text">Детали заказа (необязательно)</div>
+        <textarea class="modal-body-situation-input" placeholder="Кратко опишите Ваши пожелания"
         maxlength="5000" name="problem" id="problem"></textarea>
       </div>
 
       <div class="modal-body-buttons">
-        <input type="submit" class="modal-body-buttons-submit" value="Сохранить"/>
+        <input 
+        type="submit" 
+        class="modal-body-buttons-submit" value="Отправить" 
+        name="submit"/>
         <button class="modal-body-buttons-cancel">Отмена</button>
       </div>
     </form>
@@ -50,7 +53,7 @@
           <div class="contact-info">
             <div class="address">г. Москва, ул. Орджоникидзе, д. 11, стр. 11, офис 401</div>
             <div class="email"><a href="mailto:info@gtpi.ru">info@gtpi.ru</a></div>
-            <div class="phone"><a href="tel:+74956480890">+7(495)648-08-90</a></div>
+            <div class="phone"><a href="tel:+74956480890">+7 (495) 648-08-90</a></div>
           </div>
           <nav class="header-nav" id="header-nav">
             <a href="index.html" class="btn current">ГЛАВНАЯ</a>
@@ -155,14 +158,14 @@
       <div class="about-main">
         <div class="about-main-left">
           <p class="about-main-left-text">
-            С момента основания в 2011 году компания ООО «ГазтехПроектинвест» (ООО «ГТПИ») постоянно
+            С момента основания в 2011 году компания Общество с ограниченной ответственностью «ГазтехПроектинвест» (ООО «ГТПИ») постоянно
             расширяет список своих инженерно-технических услуг. Мы всегда стремимся сделать наши
             проекты лидерами технического прогресса. Работая над каждым новым проектом, мы делаем
             все возможное, чтобы обеспечить для заказчика наилучший результат, не выходя за рамки
             утвержденного бюджета.
           </p>
           <p class="about-main-left-text">
-            Компания ООО «ГазтехПроектинвест» (ООО «ГТПИ») выполнит для Вас полный спектр работ на
+            Компания Общество с ограниченной ответственностью «ГазтехПроектинвест» (ООО «ГТПИ») выполнит для Вас полный спектр работ на
             всех этапах: от проектирования-согласования до ввода в эксплуатацию,
             гарантийно-сервисного обслуживания инженерных систем и оборудования.
           </p>
@@ -213,7 +216,7 @@
                     <span>Поставка оборудования</span>
                 </li>
                 <li>
-                    <span>Шефмонтажные работы и пусконаладочные работы</span>
+                    <span>Шеф-монтажные работы и пусконаладочные работы</span>
                 </li>
                 <li>
                     <span>Сервисное и постгарантийное обслуживание</span>
@@ -318,8 +321,7 @@
       <div class="footer-left">
         <nav class="footer-nav">
           <a href="index.html">главная</a>
-          <a href="pages/equipments.html">оборудование</a>
-          <a href="pages/equipments.html">услуги</a>
+          <a href="pages/equipments.html">оборудование и услуги</a>
           <a href="pages/customers.html">заказчики</a>
           <a href="#certificates">сертификаты</a>
           <a href="#contacts">контакты</a>
@@ -327,7 +329,7 @@
         <div class="footer-contacts">
           <div>г. Москва, ул. Орджоникидзе, д. 11, стр. 11, офис 401</div>
           <div>Email: <a href="mailto:info@gtpi.ru">info@gtpi.ru</a></div>
-          <div>Тел/факс: <a href="tel:+74956480890">+7(495)648-08-90</a></div>
+          <div>Тел/факс: <a href="tel:+74956480890">+7 (495) 648-08-90</a></div>
         </div>
       </div>
 
