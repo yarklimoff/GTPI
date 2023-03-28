@@ -1091,6 +1091,7 @@ a:visited {
 .certificates-body-wrapper img {
   height: 100%;
   object-fit: contain;
+  max-width: 100%;
 }
 
 .certificates-modal.active {
