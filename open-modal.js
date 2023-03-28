@@ -1,6 +1,7 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function (e) {
+  e.preventDefault();
   const openModalButtons = document.querySelectorAll('[data-modal-target]');
   const closeModalButtons = document.querySelectorAll('[data-close-button]');
   const overlay = document.getElementById('overlay');
@@ -12,7 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   overlay.addEventListener('click', () => {
     const modals = document.querySelectorAll('.modal.active');
+    const certificate_modals = document.querySelectorAll('.certificates-modal.active');
     modals.forEach((modal) => {
+      closeModal(modal);
+    });
+    certificate_modals.forEach((modal) => {
       closeModal(modal);
     });
   });
@@ -20,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
   closeModalButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const modal = button.closest('.modal');
+      const certificate_modals = button.closest('.certificates-modal');
       closeModal(modal);
+      closeModal(certificate_modals);
     });
   });
 

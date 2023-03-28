@@ -41,7 +41,7 @@
         type="submit" 
         class="modal-body-buttons-submit" value="Отправить" 
         name="submit"/>
-        <button class="modal-body-buttons-cancel">Отмена</button>
+        <button class="modal-body-buttons-cancel" data-close-button>Отмена</button>
       </div>
     </form>
   </div>
@@ -278,43 +278,91 @@
       <div class="certificates-header">Сертификаты</div>
       <div class="certificates-body">
         <div class="certificates-element">
-          <img src="assets/certificates/c1.svg">
+          <img src="assets/certificates/c1.svg"
+          data-modal-target="#certificate-1-modal">
           <div class="certificates-element-label">
-            соответствия требованиям по взрывозащите
+            Соответствия требованиям по взрывозащите
           </div>
         </div>
         <div class="certificates-element">
-          <img src="assets/certificates/c2.svg">
+          <img src="assets/certificates/c2.svg"
+          data-modal-target="#certificate-2-modal">
           <div class="certificates-element-label">
-            соответствия требованиям Технического регламента Таможенного союза
+            Соответствия требованиям Технического регламента Таможенного союза
           </div>
         </div>
         <div class="certificates-element">
-          <img src="assets/certificates/c3.svg">
+          <img src="assets/certificates/c3.svg"
+          data-modal-target="#certificate-3-modal">
           <div class="certificates-element-label">
             Приложение к сертификату Технического регламента Таможенного союза
           </div>
         </div>
         <div class="certificates-element">
-          <img src="assets/certificates/c4.svg">
+          <img src="assets/certificates/c4.svg"
+          data-modal-target="#certificate-4-modal">
           <div class="certificates-element-label">
             Приложение 2 к сертификату Технического регламента Таможенного союза
           </div>
         </div>
         <div class="certificates-element">
-          <img src="assets/certificates/c5.svg">
+          <img src="assets/certificates/c5.svg"
+          data-modal-target="#certificate-5-modal">
           <div class="certificates-element-label">
             Декларация о соответствии
           </div>
         </div>
         <div class="certificates-element">
-          <img src="assets/certificates/c6.svg">
+          <img src="assets/certificates/c6.svg" data-modal-target="#certificate-6-modal" >
           <div class="certificates-element-label">
             Сертификат связи
           </div>
         </div>
       </div>
     </section>
+    <div class="certificates-modal" id="certificate-1-modal">
+      <div class="certificates-modal-header">
+        <div class="certificates-modal-header-title">Соответствия требованиям по взрывозащите</div>
+        <button class="close-button" data-close-button><img src="assets/close-icon.svg"></button>
+      </div>
+      <div class="certificates-body-wrapper"><img src="assets/certificates/c1.svg"></div>
+    </div>
+    <div class="certificates-modal" id="certificate-2-modal">
+      <div class="certificates-modal-header">
+        <div class="certificates-modal-header-title">Соответствия требованиям Технического регламента Таможенного союза</div>
+        <button class="close-button" data-close-button><img src="assets/close-icon.svg"></button>
+      </div>
+      <div class="certificates-body-wrapper"><img src="assets/certificates/c2.svg"></div>
+    </div>
+    <div class="certificates-modal" id="certificate-3-modal">
+      <div class="certificates-modal-header">
+        <div class="certificates-modal-header-title">Приложение к сертификату Технического регламента Таможенного союза</div>
+        <button class="close-button" data-close-button><img src="assets/close-icon.svg"></button>
+      </div>
+      <div class="certificates-body-wrapper"><img src="assets/certificates/c3.svg"></div>
+    </div>
+    <div class="certificates-modal" id="certificate-4-modal">
+      <div class="certificates-modal-header">
+        <div class="certificates-modal-header-title">Приложение 2 к сертификату Технического регламента Таможенного союза</div>
+        <button class="close-button" data-close-button><img src="assets/close-icon.svg"></button>
+      </div>
+      <div class="certificates-body-wrapper"><img src="assets/certificates/c4.svg"></div>
+    </div>
+    <div class="certificates-modal" id="certificate-5-modal">
+      <div class="certificates-modal-header">
+        <div class="certificates-modal-header-title">Декларация о соответствии</div>
+        <button class="close-button" data-close-button><img src="assets/close-icon.svg"></button>
+      </div>
+      <div class="certificates-body-wrapper"><img src="assets/certificates/c5.svg"></div>
+    </div>
+
+    <div class="certificates-modal" id="certificate-6-modal">
+      <div class="certificates-modal-header">
+        <div class="certificates-modal-header-title">Сертификат связи</div>
+        <button class="close-button" data-close-button><img src="assets/close-icon.svg"></button>
+      </div>
+      <div class="certificates-body-wrapper"><img src="assets/certificates/c6.svg"></div>
+    </div>
 
   
     <footer class="footer">

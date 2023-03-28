@@ -474,10 +474,13 @@ a:visited {
   column-gap: 50px;
 }
 
+
+
 .certificates-element img {
   object-fit: cover;
   width: 100%;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
 .certificates-element-label {
@@ -1066,4 +1069,82 @@ a:visited {
 }
 
 .customers-logos-loop img {
+}
+
+.certificates-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border-radius: 12px;
+  z-index: 10;
+  background-color: white;
+  height: 80%;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  
+}
+
+.certificates-body-wrapper img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.certificates-modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.certificates-modal-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.certificates-modal-header-title {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.certificates-modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-weight: bold;
+}
+
+.certificates-body-wrapper {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.certificates-modal-body {
+  position: relative;
+}
+
+.certificates-modal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9) center / 50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 12px;
+}
+
+.certificates-modal._sending::after {
+  opacity: 1;
+  visibility: visible;
 }
