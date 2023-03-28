@@ -1081,11 +1081,10 @@ a:visited {
   z-index: 10;
   background-color: white;
   height: 80%;
+  max-width: 95%;
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 24px;
-  margin-right: 100px;
-  margin-left: 100px;
   
 }
 
