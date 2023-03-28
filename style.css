@@ -1068,9 +1068,6 @@ a:visited {
   height: 50px;
 }
 
-.customers-logos-loop img {
-}
-
 .certificates-modal {
   position: fixed;
   top: 50%;
@@ -1088,11 +1085,14 @@ a:visited {
   
 }
 
+.certificates-body-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .certificates-body-wrapper img {
   height: 100%;
   object-fit: cover;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .certificates-modal.active {
