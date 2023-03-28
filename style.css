@@ -1091,7 +1091,7 @@ a:visited {
 }
 
 .certificates-body-wrapper img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .certificates-modal.active {
