@@ -1126,7 +1126,6 @@ a:visited {
   height: 90%;
   display: flex;
   justify-content: center;
-  max-width: 100%;
 }
 
 .certificates-modal-body {
