@@ -1088,9 +1088,6 @@ a:visited {
   
 }
 
-.certificates-body-wrapper {
-  object-fit: contain;
-}
 
 .certificates-body-wrapper img {
   height: 100%;
